@@ -4,5 +4,5 @@ import { DetaliiDestinatie } from './detalii-destinatie/detalii-destinatie';
 
 export const routes: Routes = [
   { path: '', component: Destinatii },
-  { path: 'detalii', component: DetaliiDestinatie }
+  { path: 'detalii/:nume', component: DetaliiDestinatie }
 ];

@@ -1,5 +1,12 @@
-<div class="pagina-detalii">
-  <button routerLink="/">⬅ Înapoi la listă</button>
-  <h1>Detalii Destinație</h1>
-  <p>Aici vom afișa informații amănunțite despre locul selectat.</p>
+<div class="container-detalii">
+  <button routerLink="/" class="btn-back">⬅ Înapoi la listă</button>
+  
+  <div class="content">
+    <h1>{{ numeDestinatie }}</h1>
+    <p>Ai ales să vizitezi una dintre cele mai frumoase locații: <strong>{{ numeDestinatie }}</strong>.</p>
+    
+    <div class="info-placeholder">
+       Aici vor apărea detaliile complete pentru {{ numeDestinatie }}...
+    </div>
+  </div>
 </div>
