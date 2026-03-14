@@ -1,0 +1,18 @@
+<div class="pagina-monument" *ngIf="obiectiv">
+  <button (click)="mergiInapoi()" class="btn-back">⬅ Înapoi la {{ numeOras }}</button>
+
+  <div class="continut-monument">
+    <img [src]="obiectiv.foto" [alt]="obiectiv.nume" class="imagine-mare">
+    
+    <div class="text-detalii">
+      <span class="badge">Obiectiv Turistic</span>
+      <h1>{{ obiectiv.nume }}</h1>
+      <p class="descriere-completa">{{ obiectiv.desc }}</p>
+      
+      <div class="info-utila">
+        <p>📍 Locație: {{ numeOras | titlecase }}, Franța</p>
+        <p>⭐ Recomandat pentru: Vizite culturale, Fotografii</p>
+      </div>
+    </div>
+  </div>
+</div>

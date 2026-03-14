@@ -1,28 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { CommonModule, Location } from '@angular/common'; // Am adăugat Location aici
+import { CommonModule, Location } from '@angular/common';
+import { DateTuristiceService } from '../date-turistice'; // Importă Service-ul
 
 @Component({
-  selector: 'app-detalii-destinatie',
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './detalii-destinatie.html',
   styleUrl: './detalii-destinatie.css'
 })
 export class DetaliiDestinatie implements OnInit {
-  numeDestinatie: string | null = '';
+  orasSelectat: any;
 
-  // Adăugăm location în constructor
   constructor(
     private route: ActivatedRoute,
-    private location: Location 
+    private location: Location,
+    private dateService: DateTuristiceService // Injectează Service-ul
   ) {}
 
   ngOnInit() {
-    this.numeDestinatie = this.route.snapshot.paramMap.get('nume');
+    const id = this.route.snapshot.paramMap.get('numeOras');
+    if (id) {
+      this.orasSelectat = this.dateService.getOrasDupaId(id);
+    }
   }
 
-  // Creăm o funcție care să ne ducă înapoi
   mergiInapoi() {
     this.location.back();
   }

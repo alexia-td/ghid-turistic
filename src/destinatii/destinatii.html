@@ -1,18 +1,26 @@
-<div class="sectiune-destinatii">
-  <h2>Destinații de Top</h2>
-  
+<div class="ghid-franta">
+  <div class="header-sectiune">
+    <h2>Explorează Franța</h2>
+    <p>Descoperă eleganța orașelor franceze, de la luminile Parisului la soarele de pe Coasta de Azur.</p>
+  </div>
+
   <div class="grid-destinatii">
-    <div class="card" *ngFor="let destinatie of listaDestinatii">
+    <div class="card-oras" *ngFor="let oras of listaDestinatii">
       
-      <img [src]="destinatie.imagine" alt="{{ destinatie.titlu }}">
-      
-      <div class="card-continut">
-        <h3>{{ destinatie.titlu }}</h3>
-        <p>{{ destinatie.descriere }}</p>
+      <div class="container-imagine">
+        <img [src]="oras.imagine" [alt]="oras.titlu">
+        <div class="badge-categorie">Destinație Top</div>
+      </div>
+
+      <div class="card-corp">
+        <h3>{{ oras.titlu }}</h3>
+        <p>{{ oras.descriere }}</p>
         
-        <button class="btn-detalii" [routerLink]="['/detalii', destinatie.titlu]">
-          Vezi detalii
-        </button>
+        <div class="card-actiuni">
+          <button class="btn-exploreaza" [routerLink]="['/oras', oras.id]">
+            Vizitează {{ oras.titlu }}
+          </button>
+        </div>
       </div>
 
     </div>

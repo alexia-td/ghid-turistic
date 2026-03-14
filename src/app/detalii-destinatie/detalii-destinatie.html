@@ -1,12 +1,18 @@
-<div class="container-detalii">
-  <button (click)="mergiInapoi()" class="btn-back">⬅ Înapoi la listă</button>
-  
-  <div class="content">
-    <h1>{{ numeDestinatie }}</h1>
-    <p>Ai ales să vizitezi una dintre cele mai frumoase locații: <strong>{{ numeDestinatie }}</strong>.</p>
-    
-    <div class="info-placeholder">
-       Aici vor apărea detaliile complete pentru {{ numeDestinatie }}...
+<div class="pagina-oras" *ngIf="orasSelectat">
+  <button (click)="mergiInapoi()" class="btn-back">⬅ Înapoi</button>
+
+  <h1>{{ orasSelectat.titlu }}</h1>
+  <p>{{ orasSelectat.descriere }}</p>
+
+  <h2>Obiective în {{ orasSelectat.titlu }}</h2>
+  <div class="grid-obiective">
+    <div class="card-obiectiv" *ngFor="let obj of orasSelectat.obiective">
+      <img [src]="obj.foto" [alt]="obj.nume" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px;">
+      <h3>{{ obj.nume }}</h3>
+      <p>{{ obj.desc }}</p>
+      <button [routerLink]="['/oras', orasSelectat.id, obj.id]" class="btn-detalii">
+        Vezi monumentul
+      </button>
     </div>
   </div>
 </div>
