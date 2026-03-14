@@ -1,0 +1,15 @@
+.btn-back {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #e2e2e2;
+  color: #d32f2f; /* Un roșu discret pentru interactivitate */
+}

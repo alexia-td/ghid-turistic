@@ -1,21 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common'; // Am adăugat Location aici
 
 @Component({
   selector: 'app-detalii-destinatie',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './detalii-destinatie.html',
-  styleUrl: './detalii-destinatie.css'
+  templateUrl: './detalii-destinatie.component.html',
+  styleUrl: './detalii-destinatie.component.css'
 })
 export class DetaliiDestinatie implements OnInit {
   numeDestinatie: string | null = '';
 
-  constructor(private route: ActivatedRoute) {}
+  // Adăugăm location în constructor
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location 
+  ) {}
 
   ngOnInit() {
-    // Aici citim "numele" din bara de adrese
     this.numeDestinatie = this.route.snapshot.paramMap.get('nume');
+  }
+
+  // Creăm o funcție care să ne ducă înapoi
+  mergiInapoi() {
+    this.location.back();
   }
 }
