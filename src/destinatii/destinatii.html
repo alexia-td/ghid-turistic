@@ -3,14 +3,18 @@
   
   <div class="grid-destinatii">
     <div class="card" *ngFor="let destinatie of listaDestinatii">
-      <img [src]="loc.imagine" alt="{{ loc.titlu }}">
+      
+      <img [src]="destinatie.imagine" alt="{{ destinatie.titlu }}">
+      
       <div class="card-continut">
-        <h3>{{ loc.titlu }}</h3>
-        <p>{{ loc.descriere }}</p>
+        <h3>{{ destinatie.titlu }}</h3>
+        <p>{{ destinatie.descriere }}</p>
+        
         <button class="btn-detalii" [routerLink]="['/detalii', destinatie.titlu]">
-  Vezi detalii
-</button>
+          Vezi detalii
+        </button>
       </div>
+
     </div>
   </div>
 </div>
