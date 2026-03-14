@@ -1,0 +1,14 @@
+<div class="sectiune-destinatii">
+  <h2>Destinații de Top</h2>
+  
+  <div class="grid-destinatii">
+    <div class="card" *ngFor="let loc of listaDestinatii">
+      <img [src]="loc.imagine" alt="{{ loc.titlu }}">
+      <div class="card-continut">
+        <h3>{{ loc.titlu }}</h3>
+        <p>{{ loc.descriere }}</p>
+        <button class="btn-detalii">Vezi detalii</button>
+      </div>
+    </div>
+  </div>
+</div>

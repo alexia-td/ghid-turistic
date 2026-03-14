@@ -1,0 +1,42 @@
+/* Containerul principal al meniului */
+.bara-navigare {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b; /* Un albastru închis, modern */
+  padding: 15px 40px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* O mică umbră sub meniu */
+}
+
+/* Stil pentru Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Resetăm lista și așezăm butoanele pe orizontală */
+.link-uri {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Distanța dintre butoane */
+  margin: 0;
+  padding: 0;
+}
+
+/* Stilul textului din butoane */
+.link-uri li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Animație fină la schimbarea culorii */
+}
+
+/* Efectul de hover (când pui mouse-ul pe ele) */
+.link-uri li a:hover {
+  color: #38bdf8; /* Un albastru deschis */
+}

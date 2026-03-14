@@ -1,0 +1,59 @@
+.sectiune-destinatii {
+  padding: 50px 20px;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1e293b;
+}
+
+.grid-destinatii {
+  display: grid;
+  /* Această linie face grid-ul "inteligent" (se adaptează singur pe mobil) */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Cardul se ridică puțin când pui mouse-ul */
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-continut {
+  padding: 20px;
+  text-align: left;
+}
+
+.btn-detalii {
+  background: none;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-detalii:hover {
+  background: #38bdf8;
+  color: white;
+}

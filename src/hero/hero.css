@@ -1,0 +1,53 @@
+.hero-container {
+  /* Folosim o imagine de fundal superbă de pe Unsplash */
+  background-image: url('https://images.unsplash.com/photo-1549420658-005118712395?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* Ocupă 60% din înălțimea ecranului */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4); /* Un strat negru transparent pentru a citi textul mai ușor */
+  padding: 40px;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.btn-explora {
+  background-color: #38bdf8;
+  color: #1e293b;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-explora:hover {
+  background-color: #7dd3fc;
+  transform: scale(1.05); /* Se mărește puțin când pui mouse-ul */
+}
