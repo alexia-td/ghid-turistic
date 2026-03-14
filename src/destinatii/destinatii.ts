@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Important pentru liste!
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-destinatii',
   standalone: true,
-  imports: [CommonModule], // Adăugăm CommonModule aici
+  imports: [CommonModule, RouterModule], // Adăugăm CommonModule aici
   templateUrl: './destinatii.html',
   styleUrl: './destinatii.css'
 })
