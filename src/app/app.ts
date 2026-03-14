@@ -8,7 +8,7 @@ import { Destinatii } from '../destinatii/destinatii';
   selector: 'app-root',
   standalone: true,
   // Am pus doar "Meniu" aici
-  imports: [RouterOutlet, Meniu, Hero, Destinatii], 
+  imports: [RouterOutlet, Meniu, Hero], 
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

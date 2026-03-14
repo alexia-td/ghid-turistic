@@ -6,8 +6,8 @@ import { CommonModule, Location } from '@angular/common'; // Am adăugat Locatio
   selector: 'app-detalii-destinatie',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './detalii-destinatie.component.html',
-  styleUrl: './detalii-destinatie.component.css'
+  templateUrl: './detalii-destinatie.html',
+  styleUrl: './detalii-destinatie.css'
 })
 export class DetaliiDestinatie implements OnInit {
   numeDestinatie: string | null = '';
